@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="robot_ssl">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00302358658417691 -0.00445741761602437 0.0200441306791806"
+        rpy="0 0 0" />
+      <mass
+        value="0.573945444644103" />
+      <inertia
+        ixx="0.000445744627197402"
+        ixy="-2.73019376045195E-06"
+        ixz="-4.13283617021798E-08"
+        iyy="0.000565507306333485"
+        iyz="-9.04855120290253E-08"
+        izz="0.000921151504185835" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ssl/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ssl/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_behind">
+    <inertial>
+      <origin
+        xyz="3.59347214824723E-07 5.69150074951341E-08 0.00555737571345623"
+        rpy="0 0 0" />
+      <mass
+        value="0.0708645323436627" />
+      <inertia
+        ixx="8.4685668766733E-06"
+        ixy="3.26918534174523E-09"
+        ixz="-9.93674782739121E-11"
+        iyy="8.4688855810913E-06"
+        iyz="-1.57382624329269E-11"
+        izz="1.65136182041727E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ssl/meshes/left_behind.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ssl/meshes/left_behind.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_b"
+    type="continuous">
+    <origin
+      xyz="-0.048013 -0.0225 -0.052255"
+      rpy="3.1416 0.7854 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_behind" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="right_front">
+    <inertial>
+      <origin
+        xyz="3.59344298102304E-07 5.6932827317141E-08 0.00555737570546948"
+        rpy="0 0 0" />
+      <mass
+        value="0.070864532258488" />
+      <inertia
+        ixx="8.46856687657512E-06"
+        ixy="3.26918536744735E-09"
+        ixz="-9.93677060340836E-11"
+        iyy="8.46888558097613E-06"
+        iyz="-1.57417493587761E-11"
+        izz="1.65136182025783E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ssl/meshes/right_front.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ssl/meshes/right_front.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_f"
+    type="continuous">
+    <origin
+      xyz="0.060127 -0.0225 0.037571"
+      rpy="0 -1.0123 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_front" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="left_front">
+    <inertial>
+      <origin
+        xyz="3.59347536636311E-07 5.68961228929188E-08 0.0055573757064511"
+        rpy="0 0 0" />
+      <mass
+        value="0.0708645322696027" />
+      <inertia
+        ixx="8.46856687657562E-06"
+        ixy="3.26918536654108E-09"
+        ixz="-9.9366722059616E-11"
+        iyy="8.46888558096191E-06"
+        iyz="-1.57346865779547E-11"
+        izz="1.65136182030143E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ssl/meshes/left_front.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ssl/meshes/left_front.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_f"
+    type="continuous">
+    <origin
+      xyz="-0.060127 -0.0225 0.037571"
+      rpy="0.21751 0.99714 -2.8843" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_front" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      effort="100"
+      velocity="1" />
+  </joint>
+  <link
+    name="right_behind">
+    <inertial>
+      <origin
+        xyz="3.59347214725844E-07 5.69150074743174E-08 0.00555737571419769"
+        rpy="0 0 0" />
+      <mass
+        value="0.0708645323521038" />
+      <inertia
+        ixx="8.46856687666797E-06"
+        ixy="3.26918534176039E-09"
+        ixz="-9.93674782706989E-11"
+        iyy="8.46888558108596E-06"
+        iyz="-1.57382624368783E-11"
+        izz="1.65136182045038E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ssl/meshes/right_behind.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_ssl/meshes/right_behind.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_b"
+    type="continuous">
+    <origin
+      xyz="0.048013 -0.0225 -0.052255"
+      rpy="-3.0044 -0.77586 -0.19469" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_behind" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
